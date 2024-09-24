@@ -1,7 +1,7 @@
-#DealDen
+DealDen
 
-##features
- ####User Registration
-     Product catalogue with Image
-     Shopping cart and checkout
+->features
+   ~User Registration
+   ~Product catalogue with Image
+   ~Shopping cart and checkout
      
