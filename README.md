@@ -1,4 +1,5 @@
 *DealDen HTML/CSS/JS Project*
+
 This project is a simple e-commerce website with a login system, product list, and shopping cart functionality.
 
 *Features*
