@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assignment!</title>
+    <title>DealDen</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: black;
         }
+        
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
+        
         h1, h2 {
             text-align: center;
         }
+        
         .login-container, .home-container {
             display: none;
-            background-color: white;
+            background-color: #2E4053;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        } 
-.nav{ margin:0 15px;
-colour :blue;
-text-decoration:none;
-}
+        }
+        
+        .nav{
+            margin:0 15px;
+            color: blue;
+            text-decoration:none;
+        }
+        
         .active {
             display: block;
         }
+        
         input, button {
             width: 100%;
             padding: 10px;
@@ -38,20 +44,24 @@ text-decoration:none;
             border-radius: 5px;
             border: 1px solid #ddd;
         }
+        
         button {
             background-color: grey;
             color: white;
             border: none;
             cursor: pointer;
         }
+        
         button:hover {
             background-color: #0056b3;
         }
+        
         .products {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
+        
         .product {
             background-color: white;
             padding: 20px;
@@ -60,9 +70,11 @@ text-decoration:none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 45%;
         }
+        
         .product img {
             width: 100%;
         }
+        
         .cart {
             margin-top: 20px;
             background-color: #fff;
@@ -70,10 +82,57 @@ text-decoration:none;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        
+        /* Navigation Bar */
+        nav {
+            background: #212121;
+            padding: 0.01rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.1rem 1rem;
+            display: block;
+            font-weight: bold;
+            transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            color: #1a1a1a;
+            background: #ff9900;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
     <!-- Login Form -->
     <div class="container login-container active" id="loginForm">
         <h2>Login</h2>
@@ -84,36 +143,33 @@ text-decoration:none;
         <button id="validateOtpBtn">Validate</button>
         <p id="error" class="error" style="color: red;"></p>
     </div>
-
+    
     <!-- Home Page -->
     <div class="container home-container" id="homePage">
-<nav>
-<a href ="#">home</a>
-<a href ="#">about</a>
-<a href ="#">services</a>
-<a href ="#">contact</a></nav>
-
         <h1>Welcome to the page, <span id="usernameDisplay"></span></h1>
-        <h2>Product List</h2>
+        <h1>Prodxo</h1>
         <div class="products">
             <div class="product">
-                <img src="C:\Users\User\Downloads\images.jpg" alt="Product 1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr7_97srE6hIDqSvAiN9CrrJe0KDoknkcLDsVydUS53_3c8I2YdrbFCKPeNIFwd7sEZZo&usqp=CAU" alt="Product 1">
                 <h3>Product 1</h3>
                 <p>Price: ₹179</p>
                 <button onclick="addToCart('Product 1', 179)">Add to Cart</button>
             </div>
             <div class="product">
-                <img src="C:\Users\User\Downloads\lipgloss.jpg" alt="Product 2 ">
+                <img src="https://static.toiimg.com/thumb/msid-66272083,imgsize-78413,width-400,resizemode-4/66272083.jpg" alt="Product 2 ">
                 <h3>Product 2</h3>
                 <p>Price: ₹99</p>
                 <button onclick="addToCart('Product 2', 99)">Add to Cart</button>
             </div>
             <div class="product">
-                <img src="C:\Users\User\Downloads\serum.jpg" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>Price: ₹249</p>
-                <button onclick="addToCart('Product 3', 249)">Add to Cart</button>
-            </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nCWYAHxEXtrtB0UJi49LOzdn7R-V3EhgY1IeJpdeo2R1b5Fmq4m3IAVJoCTzvfvDvRk&usqp=CAU" alt="Product 3">
+    </a>
+    <h3>Product 3</h3>
+    <p>Price: ₹249</p>
+    <button onclick="addToCart('Product 3', 249)">Add to Cart</button>
+</div>
+
+           
             <!-- Add more products as needed -->
         </div>
 
